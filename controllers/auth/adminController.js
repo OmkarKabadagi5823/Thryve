@@ -1,8 +1,10 @@
-exports.getAdmin = (req, res) => {
+import User from './../../models/user'
+
+export const getAdmin = (req, res) => {
     return res.render('keyForm')
 }
 
-exports.postAdmin = async (req, res) => {
+export const postAdmin = async (req, res) => {
     const
         userId = req.user._id,
         key = process.env.ADMIN_KEY
